@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Tab_Widget</class>
+ <widget class="QMainWindow" name="Tab_Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1020</width>
+    <height>598</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::South</enum>
+      </property>
+      <property name="currentIndex">
+       <number>8</number>
+      </property>
+      <widget class="Man_Widget" name="manmode">
+       <attribute name="title">
+        <string>手动模式</string>
+       </attribute>
+      </widget>
+      <widget class="Auto_Widget" name="automode">
+       <attribute name="title">
+        <string>自动模式</string>
+       </attribute>
+      </widget>
+      <widget class="Para_Adj" name="paraadj">
+       <attribute name="title">
+        <string>参数调整</string>
+       </attribute>
+      </widget>
+      <widget class="Back_Debug" name="backdebug">
+       <attribute name="title">
+        <string>后台调试</string>
+       </attribute>
+      </widget>
+      <widget class="War_Limit" name="warlimit">
+       <attribute name="title">
+        <string>信息</string>
+       </attribute>
+      </widget>
+      <widget class="frmTcpClient" name="frmclient">
+       <attribute name="title">
+        <string>客户端</string>
+       </attribute>
+      </widget>
+      <widget class="HttpWindow" name="httpwindow">
+       <attribute name="title">
+        <string>下载固件</string>
+       </attribute>
+      </widget>
+      <widget class="Widget" name="ymodem">
+       <attribute name="title">
+        <string>传输固件</string>
+       </attribute>
+      </widget>
+      <widget class="FirWare_Upd" name="firmwareup">
+       <attribute name="title">
+        <string>预留</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1020</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Operation
+</string>
+    </property>
+    <addaction name="configure"/>
+    <addaction name="connect"/>
+    <addaction name="disconnect"/>
+    <addaction name="quit"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="connect">
+   <property name="icon">
+    <iconset>
+     <normaloff>picture/conect.png</normaloff>picture/conect.png</iconset>
+   </property>
+   <property name="text">
+    <string>连接(connect)</string>
+   </property>
+  </action>
+  <action name="disconnect">
+   <property name="icon">
+    <iconset>
+     <normaloff>picture/disconect.png</normaloff>picture/disconect.png</iconset>
+   </property>
+   <property name="text">
+    <string>断开(disconnect)</string>
+   </property>
+  </action>
+  <action name="quit">
+   <property name="text">
+    <string>退出(quit)</string>
+   </property>
+  </action>
+  <action name="configure">
+   <property name="icon">
+    <iconset>
+     <normaloff>picture/config.png</normaloff>picture/config.png</iconset>
+   </property>
+   <property name="text">
+    <string>配置(configure)</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Man_Widget</class>
+   <extends>QWidget</extends>
+   <header>man_widget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Auto_Widget</class>
+   <extends>QWidget</extends>
+   <header>auto_widget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Para_Adj</class>
+   <extends>QWidget</extends>
+   <header>para_adj.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Back_Debug</class>
+   <extends>QWidget</extends>
+   <header>back_debug.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>FirWare_Upd</class>
+   <extends>QWidget</extends>
+   <header>firware_upd.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>War_Limit</class>
+   <extends>QWidget</extends>
+   <header>war_limit.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>frmTcpClient</class>
+   <extends>QWidget</extends>
+   <header>frmtcpclient.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>HttpWindow</class>
+   <extends>QWidget</extends>
+   <header location="global">httpwindow.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Widget</class>
+   <extends>QWidget</extends>
+   <header>widget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>picture/conect.png</file>
+        <file>picture/config.png</file>
+        <file>picture/disconect.png</file>
+    </qresource>
+</RCC>
