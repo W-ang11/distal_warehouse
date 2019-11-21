@@ -1,5 +1,6 @@
 #include "para_inface.h"
 #include "ui_para_inface.h"
+#include "keyBoard.h"
 
 extern Para_Inface *p_i;
 int  def_rec_type = 0,rec_type = 0;  //接收机类型 0 - deacon ; 1 - dvb ;

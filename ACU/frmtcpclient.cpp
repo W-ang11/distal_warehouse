@@ -681,13 +681,15 @@ void frmTcpClient::Cloud_Things_Post()            //发布事件推送
     char temp[TBUFF_UNIT];
 
     memset(temp,0,TBUFF_UNIT);
-sprintf(temp,"{\"method\":\"thing.event.property.post\",\"id\":\"203302322\",\"params\":{\"AZ\":%s,\"EL\":%s,\"PL\":%s},\"version\":\"1.0.0\"}",show_info.Pre_Azm,show_info.Pre_El,show_info.Pre_Pol);
+//sprintf(temp,"{\"method\":\"thing.event.property.post\",\"id\":\"203302322\",\"params\":{\"AZ\":%s,\"EL\":%s,\"PL\":%s},\"version\":\"1.0.0\"}",show_info.Pre_Azm,show_info.Pre_El,show_info.Pre_Pol);
+//  sprintf(temp,"{\"method\":\"thing.event.property.post\",\"id\":\"203302322\",\"params\":{\"He\":%s,\"EL\":%s,\"PL\":%s},\"version\":\"1.0.0\"}",show_info.Car_A,show_info.Pre_El,show_info.Pre_Pol);
 
-//    sprintf(temp,"{\"method\":\"thing.event.property.post\",\"id\":\"203302322\",\"params\":{\"AZ\":%s,\"EL\":%s,\"PL\":%s,\"T_AZ\":%s,\"T_EL\":%s,\"T_PL\":%s,\"state\":%d,\"Carrier_Head\":%s,\"Carrier_EL\":%s,\"Carrier_Roll\":%s,\"Longitude\":%s,\"Latitude\":%s,\"GPS\":%d,\"Limit\":%d,\"AGC\":%s,\"Alarm\":%d},\"version\":\"1.0.0\"}"
-//            ,show_info.Pre_Azm,show_info.Pre_El,show_info.Pre_Pol,show_info.Cur_Azm
-//            ,show_info.Cur_El,show_info.Cur_Pol,show_info.Ant_Stat,show_info.Car_A
- //           ,show_info.Car_E,show_info.Car_P,show_info.longitude,show_info.attitude
-//            ,show_info.Gps_Stat,show_info.Limit_Info,show_info.AGC,show_info.Alarm_Info);
+    sprintf(temp,"{\"method\":\"thing.event.property.post\",\"id\":\"203302322\",\"params\":{\"Carrier_Head\":%s,\"Carrier_EL\":%s,\"Carrier_Roll\":%s,\"T_AZ\":%s,\"T_EL\":%s,\"T_PL\":%s,\"state\":%d,\"Carrier_Head\":%s,\"Carrier_EL\":%s,\"Carrier_Roll\":%s,\"Longitude\":%s,\"Latitude\":%s,\"GPS\":%d,\"Limit\":%d,\"AGC\":%s,\"Alarm\":%d},\"version\":\"1.0.0\"}"
+            ,show_info.Pre_Azm,show_info.Pre_El,show_info.Pre_Pol,show_info.Cur_Azm
+            ,show_info.Cur_El,show_info.Cur_Pol,show_info.Ant_Stat,show_info.Car_A
+            ,show_info.Car_E,show_info.Car_P,show_info.longitude,show_info.attitude
+            ,show_info.Gps_Stat,show_info.Limit_Info,show_info.AGC,show_info.Alarm_Info);
+    qDebug()<<temp;
     MQTT_PublishQs0(FIX_POST_TOPIC,temp,strlen(temp));
 
     QByteArray buffer(temp_buff,Fixed_len + Variable_len + Payload_len);
